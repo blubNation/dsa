@@ -1,5 +1,4 @@
 #include "centwidget.h"
-#include "richtwidget.h"
 
 //#include <QWidget>
 //#include <QLayout>
@@ -30,7 +29,7 @@ CentWidget::~CentWidget()
     delete topLeft_PusBut_saveAs;
     delete topLeft_PusBut_close;
     delete topLeft_PusBut_exit;
-//    delete left_Lay;
+    delete left_Lay;
     delete mainlayout;
 }
 
@@ -103,13 +102,13 @@ void CentWidget::create_TopLeft()
 
 void CentWidget::new_File()
 {
-    right_Tabs[numOfTabs] = new richtwidget();
-    right_Tabs[numOfTabs]->XfileOpenDialogue();
+    //right_Tabs[numOfTabs] = new richtwidget();
+    //right_Tabs[numOfTabs]->XfileOpenDialogue();
 
-    rightWidget->addTab(right_Tabs[numOfTabs],
-                right_Tabs[numOfTabs]->getFileName());
+    //rightWidget->addTab(right_Tabs[numOfTabs],
+      //          right_Tabs[numOfTabs]->getFileName());
 
-    rightWidget->setCurrentIndex(numOfTabs);
+    //rightWidget->setCurrentIndex(numOfTabs);
 
 //    connect(topLeft_PusBut_execute, SIGNAL(clicked()), this, SLOT(useFilter()));
     connect(
@@ -130,6 +129,6 @@ void CentWidget::close_File()
 
 void CentWidget::useFilter()
 {
-    right_Tabs[rightWidget->currentIndex()]->
-            XUpdate( botLeft_ComBox->currentIndex() );
+    //right_Tabs[rightWidget->currentIndex()]->
+      //      XUpdate( botLeft_ComBox->currentIndex() );
 }

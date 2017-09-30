@@ -1,12 +1,11 @@
-#include <mainwindow.h>
-
+#include "mainwindow.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    MainWindow MW(0,&app);
+    MainWindow mw(0, &app);
+    mw.show();
 
-    MW.show();
     return app.exec();
 }

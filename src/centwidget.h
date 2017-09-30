@@ -2,7 +2,7 @@
 #define CENTWIDGET_H
 
 #include <mylayout.h>
-#include <richtwidget.h>
+//#include <richtwidget.h>
 
 #include <QFormLayout>
 #include <QLabel>
@@ -38,7 +38,7 @@ private:
 
     //Right_Lay
 //    richtwidget* right_Tabs[20];
-    richtwidget** right_Tabs;
+    //richtwidget** right_Tabs;
 
 public:
 //    explicit CentWidget(QWidget* parent = 0);
