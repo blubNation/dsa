@@ -1,15 +1,4 @@
 #include "mainwindow.h"
-//#include "ui_mainwindow.h"
-
-//#include <QMainWindow>
-#include <QMessageBox>
-//#include <QWidget>
-#include <QAction>
-#include <QMenuBar>
-#include <QToolBar>
-#include <QStatusBar>
-#include <QApplication>
-#include <QFileDialog>
 
 MainWindow::MainWindow(QWidget *parent, QApplication* app) : QMainWindow(parent)
 {

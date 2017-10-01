@@ -3,9 +3,16 @@
 
 #include <centwidget.h>
 
-#include <QMainWindow>
-#include <QWidget>
+#include <QAction>
+#include <QApplication>
+#include <QFileDialog>
 #include <QLabel>
+#include <QMainWindow>
+#include <QMenuBar>
+#include <QMessageBox>
+#include <QStatusBar>
+#include <QToolBar>
+#include <QWidget>
 
 class QAction;
 class QMenu;
@@ -23,17 +30,16 @@ public:
 private:
     CentWidget* CenWid;
 
+    QLabel* slabel1;
+    QMenu* helpMenu;
+    QAction* aboutAct;
+    QAction* aboutQtAct;
+
     void createActions( QApplication* app );
     void createMenus();
 //    bool saveFile(const QString &fileName);
 //    void setCurrentFile(const QString &fileName);
 //    QString strippedName(const QString &fullFileName);
-
-    QLabel* slabel1;
-
-    QMenu* helpMenu;
-    QAction* aboutAct;
-    QAction* aboutQtAct;
 
 private slots:
     void newFile();

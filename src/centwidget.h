@@ -1,44 +1,51 @@
 #ifndef CENTWIDGET_H
 #define CENTWIDGET_H
 
-#include <mylayout.h>
-//#include <richtwidget.h>
-
-#include <QFormLayout>
-#include <QLabel>
-#include <QComboBox>
-#include <QPushButton>
-#include <QCheckBox>
-#include <QRadioButton>
 #include <QAction>
+#include <QCheckBox>
+#include <QComboBox>
+#include <QFormLayout>
+#include <QGroupBox>
 #include <QList>
+#include <QLabel>
+#include <QPushButton>
+#include <QRadioButton>
+#include <QVBoxLayout>
 
-class CentWidget : public MyLayout
+
+class CentWidget : public QWidget
 {
     Q_OBJECT
 
 private:
-
+    void create_Layout(QWidget* parent);
     void create_BotLeft();
     void create_Right_Lay();
     void create_TopLeft();
 
+    //mainLayout
+    QHBoxLayout* mainlayout;
+
     //TopLeft_Lay
-    QPushButton* topLeft_PusBut_newFile;
-    QPushButton* topLeft_PusBut_execute;
-    QPushButton* topLeft_PusBut_save;
-    QPushButton* topLeft_PusBut_saveAs;
-    QPushButton* topLeft_PusBut_close;
-    QPushButton* topLeft_PusBut_exit;
+    QVBoxLayout* left_Lay;
+    QGroupBox* topLeft;
+        QFormLayout* topLeft_Lay;
+            QPushButton* topLeft_PusBut_newFile;
+            QPushButton* topLeft_PusBut_execute;
+            QPushButton* topLeft_PusBut_save;
+            QPushButton* topLeft_PusBut_saveAs;
+            QPushButton* topLeft_PusBut_close;
+            QPushButton* topLeft_PusBut_exit;
 
     //BotLeft_Lay
-    QLabel* botLeft_Label_1;
-    QComboBox* botLeft_ComBox;
-    QPushButton* botLeft_PusBut;
+    QGroupBox* botLeft;
+        QFormLayout* botLeft_Lay;
+            QLabel* botLeft_Label_1;
+            QComboBox* botLeft_ComBox;
+            QPushButton* botLeft_PusBut;
 
     //Right_Lay
-//    richtwidget* right_Tabs[20];
-    //richtwidget** right_Tabs;
+    QTabWidget* rightWidget;
 
 public:
 //    explicit CentWidget(QWidget* parent = 0);

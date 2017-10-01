@@ -15,12 +15,12 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     centwidget.cpp \
-    mylayout.cpp
+    createDialog/createnewhero.cpp
 
 HEADERS  += mainwindow.h \
     centwidget.h \
     json.hpp \
     json.hpp.re2c \
-    mylayout.h
+    createDialog/createnewhero.h
 
 FORMS    +=
