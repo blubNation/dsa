@@ -100,5 +100,367 @@
 			"Amazonenburg"
 		],
 		"talents": []
+	},
+	{
+		"name": "Thorwaler",
+		"GP": 5,
+		"weight": -95,
+		"ATR": [1, 0, 0, 0, 0, 1, 1],
+		"LP": 11,
+		"SP": 10,
+		"MR": -5,
+		"auto perk_harm": [
+			["Jaehzorn", 6]
+		],
+		"fit perk_harm": [
+			["Eisern", 1],
+			["Hohe Lebenskraft", 1],
+			["Innerer Kompass", 1],
+			["Kälteresistenz", 1],
+			["Kampfrausch", 1],
+			["Richtungssinn", 1],
+			["Zäher Hund", 1],
+			["Blutrausch", 1],
+			["Hitzeempfindlich", 1]
+		],
+		"unfit perk_harm": [
+			"Herausragende Balance",
+			"Nahrungsrestriktion",
+			"Hohe Magieresistenz",
+			"Kleinwüchsig"
+		],
+		"fit culture": [
+			"Thorwal",
+			"Fjarninger",
+			"Gjalskerland"
+		],
+		"pos culture": [
+			"Mittellaendische Staedte",
+			"Mittellaendische Landbevoelkerung",
+			"Andergast und Nostria",
+			"Bornland",
+			"Svellttal",
+			"Suedaventurien",
+			"Tulamidische Stadtstaaten",
+			"Bukanier"
+		],
+		"talents": [
+			["Athletik", 1],
+			["Sinnenschaerfe", 1],
+			["Zechen", 1],
+			["Wettervorhersage", 1]
+		],
+		"variants":{
+			"Thorwaler":{
+				"hair color": [
+					[8, "blond"],
+					[13, "rotblond"],
+					[15, "weissblond"],
+					[17, "rot"],
+					[18, "dunkelblond"],
+					[19, "braun"],
+					[20, "schwarz"]
+				],
+				"eye color": [
+					[2, "dunkelbraun"],
+					[7, "braun"],
+					[11, "grün"],
+					[18, "blau"],
+					[20, "grau"]
+				],
+				"height": [170, 208]
+			},
+			"Fjarninger":{
+				"hair color": [
+					[8, "blond"],
+					[13, "rotblond"],
+					[15, "weissblond"],
+					[17, "rot"],
+					[18, "dunkelblond"],
+					[19, "braun"],
+					[20, "schwarz"]
+				],
+				"eye color": [
+					[2, "dunkelbraun"],
+					[7, "braun"],
+					[11, "grün"],
+					[18, "blau"],
+					[20, "grau"]
+				],
+				"height": [175, 213]
+			},
+			"Gjalskerlaender": {
+				"hair color": [
+					[4, "blond"],
+					[8, "rotblond"],
+					[15, "rot"],
+					[17, "braun"],
+					[20, "schwarz"]
+				],
+				"eye color": [
+					[2, "dunkelbraun"],
+					[10, "braun"],
+					[18, "grün"],
+					[20, "blau"]
+				],
+				"height": [170, 208]
+			}
+		}
+	},
+	{
+		"name": "Nivesen",
+		"GP": 4,
+		"hair color": [
+			[15, "kupferrot"],
+			[16, "blond"],
+			[18, "braun"],
+			[19, "dunkelblond"],
+			[20, "schwarz"]
+		],
+		"eye color": [
+			[2, "braun"],
+			[9, "hellbraun"],
+			[14, "bernsteinfarben"],
+			[17, "grün"],
+			[19, "blau"],
+			[20, "grau"]
+		],
+		"height": [157, 195],
+		"weight": -110,
+		"ATR": [0, 0, 1, 0, 0, 1, 0],
+		"LP": 9,
+		"SP": 12,
+		"MR": -5,
+		"auto perk_harm": [],
+		"fit perk_harm": [
+			["Ausdauernd", 1],
+			["Entfernungssinn", 1],
+			["Gefahreninstinkt", 1],
+			["Innerer Kompass", 1],
+			["Kälteresistenz", 1],
+			["Richtungssinn", 1],
+			["Wolfskind", 1],
+			["Zäher Hund", 1],
+			["Hitzeempfindlich", 1]
+		],
+		"unfit perk_harm": [
+			"Herausragende Balance",
+			"Nahrungsrestriktion",
+			"Hitzeresistenz",
+			"Kälteempfindlich",
+			"Platzangst"
+		],
+		"fit culture": [
+			"Nivesenstaemme",
+			"Nuanaae·Lie"
+		],
+		"pos culture": [
+			"Mittellaendische Staedte",
+			"Mittellaendische Landbevoelkerung",
+			"Bornland",
+			"Svellttal",
+			"Thorwal",
+			"Gjalskerland",
+			"Fjarninger",
+			"Norbardensippen"
+		],
+		"talents": [
+			["Schleichen", 1],
+			["Selbstbeherrschung", 1],
+			["Orientierung", 1]
+		]
+	},
+	{
+		"name": "NORBARDEN",
+		"GP": 3,
+		"hair color": [
+			[17, "schwarz"],
+			[19, "kupferrot"],
+			[20, "blond"]
+		],
+		"eye color": [
+			[3, "schwarz"],
+			[13, "dunkelbraun"],
+			[17, "braun"],
+			[19, "gruen"],
+			[20, "blau"]
+		],
+		"height": [160, 198],
+		"weight": -100,
+		"ATR": [0, 0, 0, 1, 0, 0, 0],
+		"LP": 11,
+		"SP": 10,
+		"MR": -4,
+		"auto perk_harm": [],
+		"fit perk_harm": [
+			["Gefahreninstinkt", 1],
+			["Gutes Gedaechtnis", 1],
+			["Innerer Kompass", 1],
+			["Kälteresistenz", 1],
+			["Richtungssinn", 1], 
+			["Zäher Hund", 1]
+		],
+		"unfit perk_harm": [
+			"Herausragende Balance",
+			"Hitzeresistenz",
+			"Nahrungsrestriktion",
+			"Platzangst"
+		],
+		"fit culture": [
+			"Norbardensippe"
+		],
+		"pos culture": [
+			"Mittellaendische Staedte",
+			"Mittellaendische Landbevoelkerung",
+			"Bornland",
+			"Thorwal",
+			"Svellttal",
+			"Nivesenstaemme",
+			"Gjalskerland"
+		],
+		"talents": [
+			["Orientierung", 1],
+			["Rechnen", 1]
+		]
+	},
+	{
+		"name": "LOOOL",
+		"GP": 3,
+		"hair color": [
+			[17, "schwarz"],
+			[19, "kupferrot"],
+			[20, "blond"]
+		],
+		"eye color": [
+			[3, "schwarz"],
+			[13, "dunkelbraun"],
+			[17, "braun"],
+			[19, "gruen"],
+			[20, "blau"]
+		],
+		"height": [160, 198],
+		"weight": -100,
+		"ATR": [0, 0, 0, 1, 0, 0, 0],
+		"LP": 11,
+		"SP": 10,
+		"MR": -4,
+		"auto perk_harm": [],
+		"fit perk_harm": [
+			["Gefahreninstinkt", 1],
+			["Gutes Gedaechtnis", 1],
+			["Innerer Kompass", 1],
+			["Kälteresistenz", 1],
+			["Richtungssinn", 1], 
+			["Zäher Hund", 1]
+		],
+		"unfit perk_harm": [
+			"Herausragende Balance",
+			"Hitzeresistenz",
+			"Nahrungsrestriktion",
+			"Platzangst"
+		],
+		"fit culture": [
+			"Norbardensippe"
+		],
+		"pos culture": [
+			"Mittellaendische Staedte",
+			"Mittellaendische Landbevoelkerung",
+			"Bornland",
+			"Thorwal",
+			"Svellttal",
+			"Nivesenstaemme",
+			"Gjalskerland"
+		],
+		"talents": [
+			["Orientierung", 1],
+			["Rechnen", 1]
+		]
 	}
+
+MU, KL, IN, CH, FF, GE, KO, KK
+	
+	
+	STARTWERTE TROLLZACKER
+	Generierungskosten: 7 GP
+	Haarfarbe (W20): schwarz (1-15), dunkelbraun (16-17), mittelbraun (18),
+	hellbraun (19), dunkelblond (20)
+	Augenfarbe (W20): schwarz (1-16), dunkelbraun (17), braun (18), grau
+	(19), grün (20)
+	Körpergröße: 1 95+W20 (1,96-2,15 Schritt)
+	Gewicht: Größe - 1 00 Stein
+	Eigenschafts-Modifikationen: MU +2, KL -1 , KO +1 , KK + 1
+	LE-Mod.: +1 1 LeP AU-Mod.: +1 8 AuP MR-Mod.: -5
+	Automatische Vor- und Nachteile: Platzangst 6
+	Empfohlene Vor- und Nachteile: Ausdauernd, Balance, Eisern, Entfernungssinn, Kampfrausch, Hohe Lebenskraft, Resistenz gegen Gift, Resistenz
+	gegen Krankheiten, Richtungssinn, Zäher Hund / Blutrausch, Jähzorn, Unangenehme Stimme, Unansehnlich
+	Ungeeignete Vor- und Nachteile: Gut Aussehend, Herausragende Balance, Wohlklang / Kleinwüchsig, Nahrungsrestriktion, Schlechte Regeneration
+	Übliche Kulturen: Trollzacken
+	Mögliche Kulturen: als Findelkind sehr selten bei Ferkinas im Raschtulswall, darpatischen Bauernfamilien (Mittelländische Landbevölkerung) oder Araniern (Aranien)
+	Talente: Körper: Athletik +1 , Klettern +1 , Selbstbeherrschung +1 , Sinnenschärfe +1
+	Variante Rochshaz
+	(anstelle des 'normalen'Trollzackers; Werte ebenfalls anstelle der oben genannten)
+	Generierungskosten: 6 GP
+	Körpergröße: 21 5 +W20 (2,16-2,35)
+	Gewicht: Größe - 95 Stein
+	Eigenschafts-Modifikationen: MU +2, KL -1 , GE -1 , FF -1 , KO +2, KK
+	+2
+	LE-Mod.: +1 2 LeP AU-Mod_: +20 AuP MR-Mod.: -5
+	Automatische Vor- und Nachteile: Platzangst 6, Jähzorn 6
+	Empfohlene und ungeeignete Vor- und Nachteile: wie Trollzacker,
+	dazu Randgruppe empfohlen
+	Übliche I mögliche Kulturen: nur Trollzacken
+	Talente: Körper: Athletik +2, Klettern +1 , Selbstbeherrschung +1, Sinnenschärfe +1
+
+
+
+	STARTWERTE WALDMENSCHEN
+	Generierungskosten: 5 GP
+	Haarfarbe (W20): schwarz (1-5), blauschwarz (6-19), dunkelbraun (20)
+	Augenfarbe (W20): hellbraun (1-3), dunkelbraun (4-10), schwarz (11-20)
+	Körpergröße: 1 52+3W6 (1 ,55-1 ,70 Schritt)
+	Gewicht: Größe -1 1 0 Stein
+	Eigenschafts-Modifikationen: CH +1 , GE +1 , KO +1 , KK -l
+	LE-Mod.: +8 LeP AU-Mod_: +12 AuP MR-Mod.: -6
+	Automatische Vor- und Nachteile: keine
+	Empfohlene Vor- und Nachteile: Ausdauernd, Balance, Flink, Gefahreninstinkt, Gut Aussehend, Hitzeresistenz, Resistenz gegen Gift, Schlangenmensch / Kälteempfindlich
+	Ungeeignete Vor- und Nachteile: Hohe Magieresistenz, Kälteresistenz,
+	Schwer zu verzaubern / Hitzeempfindlich, Nahrungsrestriktion
+	Übliche Kulturen: Dschungelstämme, Verlorene Stämme, Miniwatu, Darna,
+	Südaventurien, Bukanier
+	Mögliche Kulturen: Tocamuyac, Horasreich, Aranien, Tulamidische Stadtstaaten
+	Talente: Körper: Klettern +1 , Körperbeherrschung +2, Schleichen +2, Sinnenschäre +3, Tanzen +1 ; Natur: Orientierung +1
+	Variante Tocamuyac
+	(anstelle des 'normalen' Waldmenschen; Werte ebenfalls anstelle der oben genannten)
+	Generierungskosten: 3 GP
+	Haarfarbe (W20): blauschwarz (1-2), schwarz (3), dunkelbraun (5-10),
+	mittelbraun (11-20)
+	Augenfarbe (W20): hellbraun (1-3), dunkelbraun (4-10), schwarz (1 1-20)
+	Körpergröße: 1 ,42+3W6 (1 ,45-1 ,60 Schritt)
+	Gewicht: Größe -1 1 0 Stein
+	Eigenschafts-Modifikationen: CH +1 , GE +1 , KO +1 , KK -l
+	LE-Mod.: +8 LeP AU-Mod.: +1 2 AuP MR-Mod.: -6
+	Automatische Vor- und Nachteile: Kleinwüchsig
+	Empfohlene Vor- und Nachteile: Ausdauernd, Balance, Flink, Gefahreninstinkt, Gut Aussehend, Hitzeresistenz, Resistenz gegen Gift, Schlangenmensch / Kälteempfindlich
+	Ungeeignete Vor- und Nachteile: Hohe Magieresistenz, Kälteresistenz, aventurien, Bukanier, Yaquirien, Aranien, Tulamidische Stadtstaaten, MittellänSchwer zu verzaubern / Hitzeempfindlich, Meeresangst, Nahrungsrestriktion dische Städte (Vallusa)
+	Übliche Kulturen: Tocamuyac Talente: Körper: Körperbeherrschung +3, Schwimmen +3, Sinnenschärfe +3;
+	Mögliche Kulturen: Dschungelstämme, Miniwatu, Waldinsel-Utulus, Süd- Natur: Orientierung +1
+
+
+
+	STARTWERTE UTULUS
+	Generierungskosten: 9 GP
+	Haarfarbe (W20): schwarz (1-1 7), blauschwarz (18-20)
+	Augenfarbe (W20): hellbraun (1-3), dunkelbraun (410), schwarz (11-20)
+	Körpergröße: 1 65+2W20 (1 ,67-2,05 Schritt)
+	Gewicht: Größe -1 1 0 Stein
+	Eigenschafts-Modifikationen: GE +1, KO +1
+	LE-Mod.: +1 1 LeP AU-Mod.: +12 AuP MR-Mod.: -
+	Automatische Vor- und Nachteile: Hitzeresistenz
+	Empfohlene Vor- und Nachteile: Ausdauernd, Balance, Begabung
+	Musizieren, Gefahreninstinkt, Gut Aussehend, Resistenz gegen Gift, Schlangenmensch, Wohlklang / Kälteempfindlich
+	Ungeeignete Vor- und Nachteile: Hohe Magieresistenz, Kälteresistenz, Schwer zu verzaubern / Hitzeempfindlich, Nahrungsrestriktion
+	Übliche Kulturen: Waldinsel-Utulu, Dschungelstämme (Tschopukikuha),
+	Verlorene Stämme (Shokubunga), Südaventurien, Bukanier
+	Mögliche Kulturen: Yaquirien, Aranien, Dschungelstämme (andere), Tocamuyac, Tulamidische Stadtstaaten, Verlorene Stämme (andere)
+	Talente: Körper: Klettern +1 , Körperbeherrschung +2, Schleichen +2, Sinnenschärfe +3, Tanzen +1 ; Natur: Orientierung +1
 ]
