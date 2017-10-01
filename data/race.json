@@ -1,1 +1,104 @@
-
+{[
+	{
+		"name": "Mittlaender",
+		"GP": 0,
+		"hair color": [
+			[3, "schwarz"],
+			[7, "braun"],
+			[12, "dunkelblond"],
+			[16, "blond"],
+			[18, "weissblond"],
+			[20, "rot"]
+		],
+		"eye color": [
+			[2, "dunkelbraun"],
+			[9, "braun"],
+			[11, "gruen"],
+			[17, "blau"],
+			[19, "grau"],
+			[20, "schwarz"]
+		],
+		"height": [162, 200],
+		"weight": -100,
+		"ATR": [0, 0, 0, 0, 0, 0, 0],
+		"LP": 10,
+		"SP": 10,
+		"MR": -4,
+		"auto perk_harm": [],
+		"fit perk_harm": [],
+		"unfit perk_harm": [
+			"Herausragende Balance",
+			"Nahrungsrestriktion"
+		],
+		"fit culture": [
+			"Mittellaendische Staedte",
+			"Mittellaendische Landbevoelkerung",
+			"Andergast und Nostria",
+			"Bornland",
+			"Svellttal",
+			"Almada",
+			"Horasreich",
+			"Zyklopeninsel",
+			"Maraskan",
+			"Suedaventurien",
+			"Bukanier"
+		],
+		"pos culture": [
+			"Aranien",
+			"Tulamidsche Stadtstaaten",
+			"Thorwal",
+			"Mhanadistan",
+			"Amayonenburg"
+		],
+		"talents": []
+	},
+	{
+		"name": "Tulamiden",
+		"GP": 0,
+		"hair color": [
+			[6, "schwarz"],
+			[12, "dunkelbraun"],
+			[14, "mittelbraun"],
+			[17, "hellbraun"],
+			[19, "blond"],
+			[20, "rot"]
+		],
+		"eye color": [
+			[4, "schwarz"],
+			[12, "dunkelbraun"],
+			[16, "braun"],
+			[18, "grau"],
+			[19, "gruen"],
+			[20, "blau"]
+		],
+		"height": [157, 195],
+		"weight": -105,
+		"ATR": [0, 0, 0, 0, 0, 0, 0],
+		"LP": 10,
+		"SP": 10,
+		"MR": -4,
+		"auto perk_harm": [],
+			"fit perk_harm": [],
+		"unfit perk_harm": [
+			"Herausragende Balance",
+			"Nahrungsrestriktion"
+		],
+		"fit culture": [
+			"Aranien",
+		 	"Mhanadistan",
+			"Tulamidsche Stadtstaaten",
+			"Novadi",
+			"Ferkina",
+			"Zahori",
+			"Maraskan",
+			"Suedaventurien",
+			"Bukanier"
+		],
+		"pos culture": [
+			"Mittellaendische Staedte",
+			"Almada",
+			"Amazonenburg"
+		],
+		"talents": []
+	}
+]}
