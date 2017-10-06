@@ -24,7 +24,7 @@
 			["culture", "fit==2, posible==1"]
 		],
 		"talents": [
-			["culture", "aktive==1, else==0", "+value"]
+			["talent", "aktive==1, else==0", "+value"]
 		],
 		"variants": [
 			{

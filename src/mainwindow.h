@@ -19,17 +19,19 @@ class QMenu;
 class Scribble;
 class QLabel;
 
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget* w, QApplication* app);
+    MainWindow(QWidget* parent, QApplication* app);
     ~MainWindow();
 
 private:
     CentWidget* CenWid;
 
+    QApplication* MainApp;
     QLabel* slabel1;
     QMenu* helpMenu;
     QAction* aboutAct;
@@ -42,9 +44,6 @@ private:
 //    QString strippedName(const QString &fullFileName);
 
 private slots:
-    void newFile();
-    void save();
-    void saveAs();
     void about();
 
 protected:

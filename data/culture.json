@@ -1,1 +1,98 @@
+[
+	{
+		"name": "Wichtel",
+		"GP": "cost",
+		"SO-max": "sotial max value <=13",
+		"ATR": ["MU", "KL", "IN", "CH", "FF", "GE", "KO", "KK"],
+		"LP": "LifePoints",
+		"SP": "StaminaPoints",
+		"MR": "MagicResistens",
+		"auto perk_harm": [
+			["perk / harm", 2, "value"]
+		],
+		"perk_harm": [
+			["perk / harm", "fit==2, unfit==0", "value if needed"]
+		],
+		"profession": [
+			["profession", "aktive==1, else==0"]
+		],
+		"talents": [
+			["talent", "aktive==1, else==0", "+value"]
+		],
+		"variants": [
+			{
+				"name of variant": "name",
+				"same as above": "but just for this variant"
+			}
+		],
+		"additions": [
+			{
+				"name of addition": "name",
+				"same as above": "but just for this addition"
+			}
+		]
+	},
+	{
+		"name": " Mittellaendische Staedte",
+		"GP": 0,
+		"SO-max": 13,
+		"ATR": [0, 0, 0, 0, 0, 0, 0, 0],
+		"LP": 0,
+		"SP": 0,
+		"MR": 0,
+		"auto perk_harm": [ ],
+		"perk_harm": [
+			["Ausruestungsvorteil", 2],
+			["Besonderer Besitz", 2],
+			["Soziale Anpassungsfähigkeit", 2],
+			["Verbindungen", 2],
+			["Schulden", 2],
+			["Verpflichtungen", 2],
+			["Vorurteile", 2],
+			["Feenfreund", 0],
+			["Angst vor Menschenmassen", 0],
+			["Raumangst", 0]
+		],
+		"culture": [
+			["culture", "fit==2, posible==1"]
+		],
+		"talents": [
+			["culture", "aktive==1, else==0", "+value"]
+		],
+		"variants": [
+			{
+				"name of variant": "name",
+				"same as above": "but just for this variant"
+			}
+		]
+	}
+]
 
+
+
+Kriegerische Professionen: alle außer
+Stammeskrieger
+Reisende Professionen: alle außer Straßenräuber
+Gesellschaftliche Professionen: alle
+Handwerkliche Professionen: alle
+Magische Professionen: Alchimist, Druide
+(Mehrer), Hexe (Katze, Schlange, selten Rabe), Magier, Scharlatan, Schelm
+Priesterliche Professionen: Geweihter
+(Zwölfgötterkult), Geweihter (nicht-alveranische
+Gottheit); je nach Ort
+Talente
+Kampf: Armbrust oder Bogen oder Wurfmesser
++1 , Dolche +1 , Infanteriewaffen +1 , Raufen + 1
+Körper: Zechen + 1
+Gesellschaft: Etikette +1 , Gassenwissen +1 ,
+Menschenkenntnis +1 , Überreden + 1
+Natur: -Wissen: Götter/Kulte +2, Heraldik +1 , Rechnen
++1 , Rechtskunde +1 , Sagen/Legenden +2
+Schriften/Sprachen: Muttersprache Garethi
+(KL-2); Sprachen Kennen [eine passende VerkehrsFremdsprache (Tulamidya, Rogolan, Thorwalsch)] +3
+Handwerk: Ackerbau oder Hauswirtschaft +1
+Sonderfertigkeiten: Kulturkunde (Mittelreich
+oder entsprechende Region), Ortskenntnis (ein
+Stadtteil der heimischen Stadt, bei Kleinstädten die
+ganze Stadt)
+Mögliche Variant

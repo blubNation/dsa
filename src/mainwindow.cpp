@@ -2,7 +2,8 @@
 
 MainWindow::MainWindow(QWidget *parent, QApplication* app) : QMainWindow(parent)
 {
-    CenWid = new CentWidget();
+    MainApp = app;
+    CenWid = new CentWidget(parent, app);
 
     setCentralWidget(CenWid);
     setMinimumSize(750,400);
@@ -14,19 +15,6 @@ MainWindow::MainWindow(QWidget *parent, QApplication* app) : QMainWindow(parent)
 }
 
 MainWindow::~MainWindow()
-{
-}
-
-void MainWindow::newFile()
-{
-    const QString fileName = QFileDialog::getOpenFileName(this);
-}
-
-void MainWindow::save()
-{
-}
-
-void MainWindow::saveAs()
 {
 }
 

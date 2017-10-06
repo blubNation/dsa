@@ -1,150 +1,152 @@
 #include "centwidget.h"
 
-//#include <QWidget>
-//#include <QLayout>
-
-
-//CentWidget::CentWidget(QWidget *parent) : QWidget(parent)
-CentWidget::CentWidget()
+CentWidget::CentWidget(QWidget* parent, QApplication* app)
 {
+    MainApp = app;
+    this->setParent(parent);
+
     // erstelle layout im heap
-    create_Layout(this);
+    createLayout(this);
 
     //setze das layout fuer das widget
-    (*this).setLayout(mainlayout); // reparents child widgets
+    this->setLayout(mainlayout); // reparents child widgets
 }
 
 CentWidget::~CentWidget()
 {
     //delete right_Tabs;
-    //delete rightWidget;
-    delete botLeft_PusBut;
-    delete botLeft_ComBox;
-    delete botLeft_Label_1;
-    delete botLeft_Lay;
-    delete botLeft;
-    delete topLeft_PusBut_newFile;
-    delete topLeft_PusBut_execute;
-    delete topLeft_PusBut_save;
-    delete topLeft_PusBut_saveAs;
-    delete topLeft_PusBut_close;
-    delete topLeft_PusBut_exit;
-    delete left_Lay;
+    delete rightWidget;
+    delete leftPusBut_new;
+    delete leftPusBut_open;
+    delete leftPusBut_import;
+    delete leftPusBut_export;
+    delete leftPusBut_delete;
+    delete leftPusBut_toPDF;
+    delete leftPusBut_print;
+    delete leftPusBut_toMail;
+    delete leftPusBut_help;
+    delete leftPusBut_quit;
+    delete leftLay;
     delete mainlayout;
 }
 
-void CentWidget::create_Layout(QWidget* parent)
+void CentWidget::createLayout(QWidget* parent)
 {
     mainlayout = new QHBoxLayout(parent);
-    left_Lay = new QVBoxLayout(parent);
-    mainlayout->addLayout(left_Lay);
+    leftLay = new QFormLayout();
+    mainlayout->addLayout(leftLay);
 
-    create_TopLeft();
-    create_BotLeft();
-    create_Right_Lay();
+    createLeftLay();
+    createRightLay();
 }
 
-void CentWidget::create_BotLeft()
-{
-    botLeft = new QGroupBox("Bearbeiten" , this);
-
-    botLeft_Lay = new QFormLayout();
-    botLeft_Lay->setSpacing(20);
-
-    botLeft_Label_1 = new QLabel("Filter:", this);
-    botLeft_ComBox = new QComboBox(this);
-    botLeft_ComBox->addItem(tr("Sobel-Filter"));
-    botLeft_ComBox->addItem(tr("Laplace-Filter"));
-    botLeft_ComBox->addItem(tr("Scharr-Filter"));
-
-    botLeft_Lay->addRow(botLeft_Label_1, botLeft_ComBox);
-
-    botLeft->setLayout(botLeft_Lay);
-    left_Lay->addWidget(botLeft);
-}
-
-void CentWidget::create_Right_Lay()
+void CentWidget::createRightLay()
 {
     rightWidget = new QTabWidget (this);
     mainlayout->addWidget(rightWidget);
 }
 
-void CentWidget::create_TopLeft()
+void CentWidget::createLeftLay()
 {
-    topLeft = new QGroupBox("Files" , this);
+//    leftLay = new QFormLayout();
+    leftLay->setSpacing(20);
+    // "New"
+    leftPusBut_new = new QPushButton(tr("&New"),this);
+    leftPusBut_new->setStatusTip(tr("Create new character"));
+    leftPusBut_new->setShortcut(tr("Ctrl+N"));
+    connect(leftPusBut_new, SIGNAL(clicked()), this, SLOT(slot_new()));
+    // "Open"
+    leftPusBut_open = new QPushButton(tr("&Open"), this);
+    leftPusBut_open->setStatusTip(tr("Open character"));
+    leftPusBut_open->setShortcut(tr("Ctrl+O"));
+    connect(leftPusBut_open, SIGNAL(clicked()), this, SLOT(slot_open()));
+    // "Import"
+    leftPusBut_import = new QPushButton(tr("&Import"),this);
+    leftPusBut_import->setStatusTip(tr("Import character"));
+    leftPusBut_import->setShortcut(tr("Ctrl+I"));
+    connect(leftPusBut_import, SIGNAL(clicked()), this, SLOT(slot_import()));
+    // "Export"
+    leftPusBut_export = new QPushButton(tr("&Export"), this);
+    leftPusBut_export->setStatusTip(tr("Export character"));
+    leftPusBut_export->setShortcut(tr("Ctrl+E"));
+    connect(leftPusBut_export, SIGNAL(clicked()), this, SLOT(slot_export()));
+    // "Delete"
+    leftPusBut_delete = new QPushButton(tr("&Delete"),this);
+    leftPusBut_delete->setStatusTip(tr("Delete character"));
+    leftPusBut_delete->setShortcut(tr("Ctrl+D"));
+    connect(leftPusBut_delete, SIGNAL(clicked()), this, SLOT(slot_delete()));
+    // "Save as PDF"
+    leftPusBut_toPDF = new QPushButton(tr("&Save as PDF"), this);
+    leftPusBut_toPDF->setStatusTip(tr("Save character as PDF"));
+    leftPusBut_toPDF->setShortcut(tr("Ctrl+S"));
+    connect(leftPusBut_toPDF, SIGNAL(clicked()), this, SLOT(slot_toPDF()));
+    // "Print"
+    leftPusBut_print = new QPushButton(tr("&Print"),this);
+    leftPusBut_print->setStatusTip(tr("Print character"));
+    leftPusBut_print->setShortcut(tr("Ctrl+P"));
+    connect(leftPusBut_print, SIGNAL(clicked()), this, SLOT(slot_print()));
+    // "Send as Mail"
+    leftPusBut_toMail = new QPushButton(tr("Send as &Mail"),this);
+    leftPusBut_toMail->setStatusTip(tr("Send character as PDF via Mail"));
+    leftPusBut_toMail->setShortcut(tr("Ctrl+M"));
+    connect(leftPusBut_toMail, SIGNAL(clicked()), this, SLOT(slot_toMail()));
+    // "Help"
+    leftPusBut_help = new QPushButton(tr("&Help"),this);
+    leftPusBut_help->setStatusTip(tr("Open Help-Window"));
+    leftPusBut_help->setShortcut(tr("Ctrl+H"));
+    connect(leftPusBut_help, SIGNAL(clicked()), this, SLOT(slot_help()));
+    // "Quit"
+    leftPusBut_quit = new QPushButton(tr("&Quit"),this);
+    leftPusBut_quit->setStatusTip(tr("Quit application"));
+    leftPusBut_quit->setShortcut(tr("Ctrl+Q"));
+    connect(leftPusBut_quit, SIGNAL(clicked()), this, SLOT(slot_quit()));
 
-    topLeft_Lay = new QFormLayout();
-    topLeft_Lay->setSpacing(20);
-
-    topLeft_PusBut_newFile = new QPushButton(tr("&Neu"),this);
-    topLeft_PusBut_newFile->setShortcut(tr("Ctrl+N"));
-    topLeft_PusBut_newFile->setStatusTip(tr("Neue Datei"));
-
-    connect(topLeft_PusBut_newFile, SIGNAL(clicked()), this, SLOT(new_File()));
-
-    topLeft_PusBut_execute = new QPushButton(tr("Anw&enden"), this);
-    topLeft_PusBut_execute->setShortcut(tr("Ctrl+E"));
-    topLeft_PusBut_execute->setStatusTip(tr("Filter anwenden"));
-
-    topLeft_Lay->addRow( topLeft_PusBut_newFile, topLeft_PusBut_execute );
-
-    topLeft_PusBut_save = new QPushButton(tr("&Speichern"),this);
-    topLeft_PusBut_save->setShortcut(tr("Ctrl+S"));
-    topLeft_PusBut_save->setStatusTip(tr("Speichere die Datei"));
-
-    connect(topLeft_PusBut_save, SIGNAL(clicked()), this, SLOT(save()));
-
-    topLeft_PusBut_saveAs = new QPushButton(tr("Speichern &als..."), this);
-    topLeft_PusBut_saveAs->setShortcut(tr("Ctrl+A"));
-    topLeft_PusBut_saveAs->setStatusTip(tr("Speichere unter Name"));
-
-    connect(topLeft_PusBut_saveAs, SIGNAL(clicked()), this, SLOT(saveAs()));
-    topLeft_Lay->addRow( topLeft_PusBut_save, topLeft_PusBut_saveAs );
-
-    topLeft_PusBut_close = new QPushButton(tr("&Schließen"),this);
-    topLeft_PusBut_close->setShortcut(tr("Ctrl+X"));
-    topLeft_PusBut_close->setStatusTip(tr("Schließe Tab"));
-
-    topLeft_PusBut_exit = new QPushButton(tr("&Beenden"),this);
-    topLeft_PusBut_exit->setShortcut(tr("Ctrl+Q"));
-    topLeft_PusBut_exit->setStatusTip(tr("Schließe Anwendung"));
-
-    connect(topLeft_PusBut_exit, SIGNAL(clicked()), this, SLOT(exit()));
-    topLeft_Lay->addRow( topLeft_PusBut_close, topLeft_PusBut_exit );
-
-    topLeft->setLayout(topLeft_Lay);
-    left_Lay->addWidget(topLeft);
+    // Add buttons to layout
+    leftLay->addRow( leftPusBut_new, leftPusBut_open);
+    leftLay->addRow( leftPusBut_import, leftPusBut_export);
+    leftLay->addRow( leftPusBut_delete, leftPusBut_toPDF);
+    leftLay->addRow( leftPusBut_print, leftPusBut_toMail);
+    leftLay->addRow( leftPusBut_help, leftPusBut_quit );
 }
 
-void CentWidget::new_File()
+void CentWidget::slot_new()
 {
-    //right_Tabs[numOfTabs] = new richtwidget();
-    //right_Tabs[numOfTabs]->XfileOpenDialogue();
-
-    //rightWidget->addTab(right_Tabs[numOfTabs],
-      //          right_Tabs[numOfTabs]->getFileName());
-
-    //rightWidget->setCurrentIndex(numOfTabs);
-
-//    connect(topLeft_PusBut_execute, SIGNAL(clicked()), this, SLOT(useFilter()));
-    connect(
-        topLeft_PusBut_execute, SIGNAL(clicked()),
-        this, SLOT(useFilter())
-           );
-
-    connect(
-        topLeft_PusBut_close, SIGNAL(clicked()),
-        this, SLOT(close_File())
-           );
+    newCharacter = new CreateNewHero(this);
+    newCharacter->show();
 }
 
-void CentWidget::close_File()
+void CentWidget::slot_open()
 {
-//    right_Tabs[rightWidget->currentIndex()]=[];
 }
 
-void CentWidget::useFilter()
+void CentWidget::slot_import()
 {
-    //right_Tabs[rightWidget->currentIndex()]->
-      //      XUpdate( botLeft_ComBox->currentIndex() );
+}
+
+void CentWidget::slot_export()
+{
+}
+
+void CentWidget::slot_delete()
+{
+}
+
+void CentWidget::slot_toPDF()
+{
+}
+
+void CentWidget::slot_print()
+{
+}
+
+void CentWidget::slot_toMail()
+{
+}
+
+void CentWidget::slot_help()
+{
+}
+
+void CentWidget::slot_quit()
+{
 }
